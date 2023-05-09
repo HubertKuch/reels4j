@@ -1,25 +1,30 @@
 package com.hubert.reels4j;
 
-import java.io.BufferedInputStream;
-import java.io.FileOutputStream;
+import com.hubert.reels4j.exceptions.CannotDownloadReelsException;
+import com.hubert.reels4j.exceptions.CannotGetReelsUrlException;
+import com.hubert.reels4j.url.ReelsUrlSupport;
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
 public class ReelsDownloader {
 
-    public static byte[] getReelsBytes(URL url) throws IOException {
-        try (
-                BufferedInputStream in = new BufferedInputStream(url.openStream());
-                FileOutputStream fileOutputStream = new FileOutputStream(System.currentTimeMillis() + "_reels");
-        ) {
-            byte[] buffer = new byte[1024];
-            int readBytes;
+    public static void downloadByReelsUrl(URL url, File target) throws IOException, CannotGetReelsUrlException {
+        String contentUrl = ReelsUrlSupport.getReelsSourceUrl(url).video().get(0).contentUrl();
 
-            while ((readBytes = in.read(buffer, 0, 1024)) != -1) {
-                fileOutputStream.write(buffer, 0, readBytes);
-            }
+        FileUtils.copyURLToFile(new URL(contentUrl), target);
+    }
 
-            return buffer;
+    public static void downloadByReelsUrl(String url, File target) throws
+            CannotGetReelsUrlException,
+            CannotDownloadReelsException {
+        try {
+            downloadByReelsUrl(new URL(url), target);
+        } catch (IOException e) {
+            throw new CannotGetReelsUrlException("Invalid url", e);
         }
     }
+
 }

@@ -10,9 +10,14 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import java.net.URL;
 import java.util.List;
 
 public class ReelsUrlSupport {
+
+    public static ReelsContentRoot getReelsSourceUrl(URL url) throws CannotGetReelsUrlException {
+        return getReelsSourceUrl(url.toString());
+    }
 
     public static ReelsContentRoot getReelsSourceUrl(String urlToReels) throws CannotGetReelsUrlException {
         try {
