@@ -1,11 +1,11 @@
-package com.hubert.reels4j.url;
+package pl.hubertkuch.reels4j.url;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hubert.reels4j.exceptions.CannotGetContentConnection;
-import com.hubert.reels4j.exceptions.CannotGetReelsUrlException;
-import com.hubert.reels4j.http.HttpConnectionHelper;
-import com.hubert.reels4j.models.ReelsContentRoot;
+import pl.hubertkuch.reels4j.exceptions.CannotGetContentConnection;
+import pl.hubertkuch.reels4j.exceptions.CannotGetReelsUrlException;
+import pl.hubertkuch.reels4j.http.HttpConnectionHelper;
+import pl.hubertkuch.reels4j.models.ReelsContentRoot;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

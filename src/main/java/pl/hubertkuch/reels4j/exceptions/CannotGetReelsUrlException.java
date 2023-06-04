@@ -1,4 +1,4 @@
-package com.hubert.reels4j.exceptions;
+package pl.hubertkuch.reels4j.exceptions;
 
 public class CannotGetReelsUrlException extends Exception {
     public CannotGetReelsUrlException() {

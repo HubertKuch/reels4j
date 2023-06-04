@@ -1,7 +1,7 @@
-package com.hubert.reels4j.models;
+package pl.hubertkuch.reels4j.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.hubert.reels4j.models.video.Video;
+import pl.hubertkuch.reels4j.models.video.Video;
 
 import java.util.List;
 

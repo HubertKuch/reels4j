@@ -1,6 +1,6 @@
-package com.hubert.reels4j.http;
+package pl.hubertkuch.reels4j.http;
 
-import com.hubert.reels4j.exceptions.CannotGetContentConnection;
+import pl.hubertkuch.reels4j.exceptions.CannotGetContentConnection;
 
 import java.io.IOException;
 import java.net.URL;

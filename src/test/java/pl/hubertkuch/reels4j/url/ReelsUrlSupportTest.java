@@ -1,7 +1,7 @@
-package com.hubert.reels4j.url;
+package pl.hubertkuch.reels4j.url;
 
-import com.hubert.reels4j.exceptions.CannotGetReelsUrlException;
-import com.hubert.reels4j.models.ReelsContentRoot;
+import pl.hubertkuch.reels4j.exceptions.CannotGetReelsUrlException;
+import pl.hubertkuch.reels4j.models.ReelsContentRoot;
 import org.junit.Test;
 
 import static org.junit.Assert.fail;

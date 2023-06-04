@@ -1,4 +1,4 @@
-package com.hubert.reels4j;
+package pl.hubertkuch.reels4j;
 
 import org.junit.Test;
 

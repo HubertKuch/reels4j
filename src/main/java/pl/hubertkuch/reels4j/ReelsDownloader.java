@@ -1,8 +1,8 @@
-package com.hubert.reels4j;
+package pl.hubertkuch.reels4j;
 
-import com.hubert.reels4j.exceptions.CannotDownloadReelsException;
-import com.hubert.reels4j.exceptions.CannotGetReelsUrlException;
-import com.hubert.reels4j.url.ReelsUrlSupport;
+import pl.hubertkuch.reels4j.exceptions.CannotDownloadReelsException;
+import pl.hubertkuch.reels4j.exceptions.CannotGetReelsUrlException;
+import pl.hubertkuch.reels4j.url.ReelsUrlSupport;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
